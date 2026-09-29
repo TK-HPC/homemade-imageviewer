@@ -16,6 +16,27 @@ uv sync
 uv run python src/main.py
 ```
 
+## Add a Hyprland app launcher entry (Arch Linux)
+
+Run these commands from the project directory. They install the dependencies and create a user-level desktop entry for Wofi, Rofi, or another launcher that reads `.desktop` files. The entry uses the current project path, so it also works if you clone the repository somewhere else.
+
+```bash
+uv sync
+PROJECT_DIR="$(pwd)"
+mkdir -p "$HOME/.local/share/applications"
+cat > "$HOME/.local/share/applications/homemade-imageviewer.desktop" <<EOF
+[Desktop Entry]
+Name=Homemade Image Viewer
+Comment=Browse images in a folder
+Exec="$PROJECT_DIR/.venv/bin/python" "$PROJECT_DIR/src/main.py"
+Type=Application
+Terminal=false
+Categories=Graphics;Viewer;
+EOF
+```
+
+Search for **Homemade Image Viewer** in your app launcher to start it.
+
 Select **Open Folder** and choose a directory containing numerically named image files, for example `1.jpg`, `2.png`, and `3.webp`.
 
 ## Current controls
