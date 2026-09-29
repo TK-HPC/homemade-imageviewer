@@ -2,6 +2,8 @@
 
 A small desktop image viewer built with Python and PySide6. Choose a folder to view its images, then click the left or right side of the image to move through the list.
 
+I spent two hours trying to decide which image viewer to use on my fresh Arch install. Some were hard to use, and some were just ugly, so I wrote my own. I love it.
+
 ## Requirements
 
 - Python 3.10 or newer
