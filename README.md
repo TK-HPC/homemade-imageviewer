@@ -1,4 +1,4 @@
-# Image Viewer
+# Homemade Image Viewer
 
 A small desktop image viewer built with Python and PySide6. Choose a folder to view its images, then click the left or right side of the image to move through the list.
 
